@@ -1,0 +1,10 @@
+public class MinMaxStringTest
+{
+	public static void main(String[ ] args)
+	{
+		MinMaxString minMax = new MinMaxString();
+		
+		System.out.println("The lexicographic minimum is " + minMax.getMin());							//print the min and the max
+		System.out.println("The lexicographic maximum is " + minMax.getMax());
+	}				
+}
