@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class MinMaxString
+{
+	public MinMaxString()
+	{		
+		console = new Scanner(System.in);									//constructor
+		System.out.print("Enter 4 strings: ");
+		s1 = console.next();
+		s2 = console.next();
+		s3 = console.next();
+		s4 = console.next();
+	}
+	public String getMin()								//get the min
+	{
+		if(s1.compareTo(s2) < 0)
+			min1 = s1;
+		else if(s2.compareTo(s1) < 0)
+			min1 = s2;
+		if(s3.compareTo(s4) < 0)
+			min2 = s3;
+		else if(s4.compareTo(s3) < 0)
+			min2 = s4;
+		if(min1.compareTo(min2) < 0)
+			min = min1;
+		else if(min2.compareTo(min1) < 0)
+			min = min2;
+		return min;
+	}
+	public String getMax()							//get the max
+	{
+		if(s1.compareTo(s2) > 0)
+			max1 = s1;
+		else if(s2.compareTo(s1) > 0)
+			max1 = s2;
+		if(s3.compareTo(s4) > 0)
+			max2 = s3;
+		else if(s4.compareTo(s3) > 0)
+			max2 = s4;
+		if(max1.compareTo(max2) > 0)
+			max = max1;
+		else if(max2.compareTo(max1) > 0)
+			max = max2;
+		return max;
+	}
+	private Scanner console;					//instance fields and constants
+	private String s1;
+	private String s2;
+	private String s3;
+	private String s4;
+	private String min1;
+	private String min2;
+	private String min;
+	private String max1;
+	private String max2;
+	private String max;
+}
